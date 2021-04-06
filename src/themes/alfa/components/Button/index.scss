@@ -1,0 +1,82 @@
+@import "../../variables/index.scss";
+
+.Button {
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+  border-radius: 4px;
+  color: $color-white;
+  cursor: pointer;
+  padding: 15px 31px;
+
+  &:not(&_disabled):not(&_processing) {
+    &:hover {
+      background-color: darken($color-primary, 10);
+      border-color: darken($color-primary, 10);
+    }
+
+    &:focus {
+      background-color: darken($color-primary, 10);
+      border-color: darken($color-primary, 10);
+      outline: none;
+    }
+
+    &:active {
+      background-color: darken($color-primary, 20);
+      border-color: darken($color-primary, 20);
+    }
+  }
+}
+
+.Button_block {
+  display: block;
+  width: 100%;
+}
+
+.Button_disabled {
+  background-color: lighten($color-grey, 55%);
+  border-color: lighten($color-grey, 40%);
+  color: lighten($color-grey, 40%);
+  cursor: default;
+}
+
+.Button_processing {
+  cursor: default;
+  position: relative;
+
+  &::before {
+    background-color: $color-white;
+    content: '';
+    height: calc(100% + 2px);
+    left: -1px;
+    opacity: 0.5;
+    position: absolute;
+    top: -1px;
+    width: calc(100% + 2px);
+  }
+
+  &::after {
+    animation: button_processing_animation 0.8s linear infinite;
+    border: 2px solid transparent;
+    border-top-color: $color-white;
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: '';
+    height: 24px;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+    position: absolute;
+    top: 50%;
+    width: 24px;
+  }
+}
+
+@keyframes button_processing_animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

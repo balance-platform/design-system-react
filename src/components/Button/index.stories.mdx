@@ -1,0 +1,57 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+
+import Button from './index'
+
+<Meta title="Components/Button" component={Button} />
+
+# Button
+
+Простая реализация кнопки
+
+## Когда использовать
+
+Всякий раз, когда на странице нужен "кликабельный" элемент 👆
+
+## Примеры использования
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      children: 'Button',
+    }}
+  >
+    {(args) => <Button {...args} />}
+  </Story>
+  <Story
+    name="Disabled"
+    args={{
+      children: 'Disabled button',
+      disabled: true,
+    }}
+  >
+    {(args) => <Button {...args} />}
+  </Story>
+  <Story
+    name="Processing"
+    args={{
+      children: 'Processing button',
+      processing: true,
+    }}
+  >
+    {(args) => <Button {...args} />}
+  </Story>
+  <Story
+    name="Block"
+    args={{
+      block: true,
+      children: 'Block button',
+    }}
+  >
+    {(args) => <Button {...args} />}
+  </Story>
+</Canvas>
+
+## Свойства
+
+<ArgsTable of={Button} />
