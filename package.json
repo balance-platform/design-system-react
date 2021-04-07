@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build-storybook": "build-storybook -s public",
     "eject": "react-scripts eject",
-    "prettier": "prettier --ignore-path .gitignore \"**/*.+(html|js|json|jsx|sass|yml)\"",
     "eslint": "eslint --ignore-path .gitignore .",
-    "stylelint": "stylelint --ignore-path .gitignore \"**/*.+(css|scss)\"",
     "lint": "npm run prettier -- --write && npm run eslint -- --fix && npm run stylelint -- --fix",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(html|js|json|jsx|sass|yml)\"",
+    "start": "react-scripts start",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "stylelint": "stylelint --ignore-path .gitignore \"**/*.+(css|scss)\"",
+    "test": "react-scripts test"
   },
   "browserslist": {
     "production": [
