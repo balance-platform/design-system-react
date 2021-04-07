@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../src/themes/alfa/theme.scss'
+import 'design-system-themes/alfa/theme.scss'
 
 export const decorators = [(Story) => <Story />]
 
