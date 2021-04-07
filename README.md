@@ -9,13 +9,13 @@
 
 ## Подключение в проект
 
-Установить зависимость с компонентами:
+Установить модуль с компонентами:
 
 ```
 npm install https://github.com/balance-platform/design-system-react.git
 ```
 
-Установить зависимость с темами:
+Установить [модуль с темами](https://github.com/balance-platform/design-system-themes):
 
 ```
 npm install https://github.com/balance-platform/design-system-themes.git
